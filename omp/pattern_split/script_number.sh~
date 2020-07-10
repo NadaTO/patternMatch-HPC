@@ -1,0 +1,17 @@
+#!/bin/bash
+
+replication=2
+data=../../dna/upstream2000.fa
+pattern=("TTCG" "TAAA" "TGGA" "TTAA" "TGTG" "AAAA" "TTTG" "ATTC" "AGGC")
+nb=${#pattern[@]}; 
+for l in $( seq nb ); do
+    patternl=${pattern[@]:nb-l-1} 
+    log_file=logs/apm_${replication}_length.log
+    OMP_NUM_THREADS=16 ./pattern_split  $replication  $data  $patternl > $log_file
+
+  time=$(grep "APM done in" $log_file|awk '{print $4}')
+	if [ "$length" -eq 1 ]; then
+		tseq=$time
+	fi
+	echo -e "$l \t $tseq \t $time"
+done

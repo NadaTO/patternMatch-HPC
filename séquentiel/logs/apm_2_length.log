@@ -1,0 +1,11 @@
+Approximate Pattern Mathing: looking for 9 pattern(s) in file ../dna/upstream2000.fa w/ distance of 2
+APM done in 130.234111 s
+Number of matches for pattern <TTCG>: 0
+Number of matches for pattern <TAAA>: 0
+Number of matches for pattern <TGGA>: 0
+Number of matches for pattern <TTAA>: 0
+Number of matches for pattern <TGTG>: 0
+Number of matches for pattern <AAAA>: 0
+Number of matches for pattern <TTTG>: 0
+Number of matches for pattern <ATTC>: 0
+Number of matches for pattern <AGGC>: 0
